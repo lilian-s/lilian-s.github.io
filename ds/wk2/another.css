@@ -1,0 +1,18 @@
+/*BEM = block element modifier*/
+
+.form {
+	width: 300px;
+	background: #eee;
+}
+
+.input-field {
+	padding: 10px;
+}
+
+.btns {
+	background: green;
+}
+
+.btn-warning {
+	background: red;
+}
