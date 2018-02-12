@@ -1,0 +1,46 @@
+.hide {
+	display: none;
+}
+
+.circle {
+	width: 300px;
+	height: 300px;
+	background-color: #3fcfc9;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -160px;
+	margin-left: -160px;
+	border: 10px solid rgba(0, 0, 0, 0.2);
+	border-top-color: white;
+	animation: spinner 0.2s infinite ease-in;
+}
+
+body {
+	background-color: rgba(0, 50, 75, 1);
+}
+
+@keyframes spinner {
+	100% {
+		background: white;
+		transform: rotate(360deg);
+	}
+}
+
+.circle--big {
+	border: 0;
+	animation: bkg-changer;
+}
+
+@keyframes bkg-changer {
+	33% {
+		background: #364f6b;
+	}
+	100% {
+		background: #3fcfc9;
+	}
+	67% {
+		background: red;
+	}
+}
