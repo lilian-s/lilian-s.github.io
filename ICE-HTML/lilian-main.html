@@ -6,20 +6,25 @@
 	</head>	
 
 	<body>
-		<h1>Lilian</h1>
-		<nav>Lilian</nav>
+		<h1>Lilian Sheu</h1>
+
+		<nav>
+			<h3>Links for Partners' Pages:</h3>
+			<a href="https://ralterman.github.io/339/ICE1/robert-main.html">Robert's Page</a><br>
+			<a href="http://google.com">Luke's Page<br><br></a>
+		</nav>
 
 		<img src='sketch.jpg' alt='Sketch' height='200' width='200'>
 		<img src='cat.jpg' alt='Cat' height='200' width='200'>
 		<img src='beauty.jpg' alt='Beauty and the Beast' height='200' width='400'>
 
-		<p>paragraph one</p>
-		<p>paragraph two</p>
+		<h2>Above are some pictures I incorporated into this page </h2>
+		<p>	From left to right, one is the sketch I completed with my group, <br>
+			one is a picture of a cat which is one of my favorite animals, <br>
+			and the last one is a picture of a movie I last saw with my mom <br>
+			a.k.a. "Beauty and the Beast".<br><br></p>
 
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/_c-oXQ0GOX4?rel=0" allowfullscreen></iframe>
-
-		<iframe width="1000" height="300" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/343417238&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-
+		<h2>Here's a form to fill out for fun</h2>
 		<form>
 			Name:
 			<input type="text" name="name" id = "name"><br>
@@ -27,15 +32,41 @@
 			<input type="date" name="DOB" id = "dob"><br>
 
 			Please enter your choice of snack:<br>
-			<input type="radio" name="snack" value="pizza"> Pizza<br>
-	  		<input type="radio" name="snack" value="donut"> Donut<br>
-	  		<input type="radio" name="snack" value="vegan"> Vegan Stuff<br>
-
+			<input id="1" type="radio" name="snack" value="pizza">
+			<label for="1">Pizza</label><br>
+	  		<input id="2" type="radio" name="snack" value="donut">
+	  		<label for="2">Donut</label><br>
+	  		<input id="3" type="radio" name="snack" value="vegan">
+	  		<label for="3">Vegan Stuff</label><br>
+	  	
 	  		Please enter your choice of drink:<br>
-			<input type="radio" name="snack" value="coffee"> Coffee<br>
-	  		<input type="radio" name="snack" value="tea"> Tea<br>
-	  		<input type="radio" name="snack" value="water"> Water<br>
+			<input id="4" type="radio" name="drink" value="coffee">
+			<label for="4">Coffee</label><br>
+	  		<input id="5" type="radio" name="drink" value="tea">
+	  		<label for="5">Tea</label><br>
+	  		<input id="6" type="radio" name="drink" value="water">
+	  		<label for="6">Water</label><br>
 		</form>
+		<p>
+			When viewing my page on different browsers, I noticed the DOB part of my form<br>
+			differed depending what browser I used. On Chrome and Safari, the DOB could be<br>
+			filled out by using the arrows or selecting the date on a calendar. However, on<br>
+			Edge, the DOB could be filled out with a scroll-through pop up; with separate<br>
+			selections for month, day, and year.<br><br>
+
+			Originally, when you click on the text next to each radio element in the form,<br>
+			it did not put the corresponding field into focus. This ends up affecting the<br>
+			user experience since the tiny radio button can be difficult to precisely click.<br>
+			Thus, I changed the form code so that the corresponding text for each radio<br>
+			button could be clicked, which would put the field into focus.<br><br><br>
+		</p> 
+
+		<h2>I also really like to listen to music in my free time ...specifically YouTube covers</h2>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/_c-oXQ0GOX4?rel=0" allowfullscreen></iframe>
+
+		<h2>...and EDM genre songs</h2>
+		<iframe width="1000" height="300" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/343417238&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe><br>
+
 	</body>
 
 </html>
