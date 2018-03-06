@@ -20,9 +20,19 @@ Add an if-else statement to your setHomeAddress() function so that when the chec
 	<title>Challenge Two</title>
     
     <script type="text/javascript">
-	   function setHomeAddress(){
-      // YOUR CODE HERE
-     }
+    function setHomeAddress(){
+      var billingValue = document.getElementById('billing').value;
+      console.log(billingValue);
+      var homeValue = document.getElementById('home').value = billingValue;
+      var useBilling = document.querySelector('#useBilling');
+      if (useBilling.checked) {
+        home.value = billingValue;
+        home.disabled = True;
+      } else {
+        home.value = '';
+        home.disabled = False;
+      }
+    }
     </script>
 </head>
 <body>
