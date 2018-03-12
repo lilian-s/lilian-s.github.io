@@ -5,29 +5,36 @@
 	<title>Challenge 4</title>
     <style>
     .errormsg { 
-        /*font: Use a cool Google font*/
+        font-family: 'Indie Flower', cursive;
     	color:red;
     	display:none; } 
     </style>
     
     <script type="text/javascript">
     function checkForm(){
-    	// Write a function that displays the appropriate error message(s) if a field is left blank.  Make sure the form action is not performed if either field is blank.
-        var fullname = document.querySelector('#fullname');
-        var streetaddr = document.querySelector('#streetaddr');
-        alert(document.querySelector('#nameerrormsg'));
-        // if ((fullname.value == '') && (streetaddr.value == '') {
-        //      alert('stop');
-        //      return false;
-        // } else if (fullname.value == '') {
-        //     alert(document.querySelector('#nameerrormsg'));
-        //     return false;
-        // } else if (streetaddr.value == '') {
-        //     alert(document.querySelector('#addrerrormsg'));
-        //     return false;
-        // }
-        return false;
-    }  
+        // Write a function that displays the appropriate error message(s) if a field is left blank.  Make sure the form action is not performed if either field is blank.
+        var fname = document.querySelector('#fullname');
+        var ername = document.querySelector('#nameerrormsg');
+        var aname = document.querySelector('#streetaddr');
+        var eradd = document.querySelector('#addrerrormsg');
+        if(fname.value.length == 0 && aname.value.length == 0){
+            ername.style.display = "block";
+            eradd.style.display = "block";
+            return false;
+        } else if (fname.value.length != 0 && aname.value.length == 0){
+            eradd.style.display = "block";
+            ername.style.display = "none";
+            return false;
+        } else if (fname.value.length == 0 && aname.value.length != 0){
+            ername.style.display = "block";
+            eradd.style.display = "none";
+            return false;
+        } else{
+            ername.style.display = "none";
+            eradd.style.display = "none";
+            return true;
+        }
+    }
     </script>
 </head>
 <body>
