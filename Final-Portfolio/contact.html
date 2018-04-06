@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang='en'>
 	<head>
-		<title>Lilian's Portfolio</title>
+		<title>IAM FAM</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="icon" type="image/ico" href="images/iam_icon.jpeg">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	</head>
@@ -13,16 +14,25 @@
 		<header>
 			<nav id="top-nav" class="top-nav">
 				<div class="logo">
-					<a href="#"><img src="https://zayzay.com/wp-content/uploads/2017/06/Greatest-Showman-title-990x557.jpg" alt="greatest showman"></a>
+					<a href="#"><img src="images/iam_icon.jpeg" alt="logo"></a>
 	       		</div>
+		        <div class="main-nav">
+	       			<ul>
+			    		<li><a href="main.html">Home</a></li>
+				    	<li><a href="about.html">About</a></li>
+			    		<li><a href="members.html">Gallery</a></li>
+			    		<li><a class="current-page" href="contact.html">Contact</a></li>
+			    	</ul>
+  				</div>
 		        <div class="dropdown">
 		        	<button onclick="myFunction()" class="dropbtn">Menu</button>
 		        	<div id="myDropdown" class="dropdown-content">
 				    	<ul>
 				    		<li><a href="main.html">Home</a></li>
 					    	<li><a href="about.html">About</a></li>
-				    		<li><a href="members.html">Members</a></li>
-				    		<li><a href="contact.html">Contact</a></li>
+				    		<li><a href="members.html">Gallery</a></li>
+				    		<li><a class="current-page" href="contact.html">Contact</a></li>
+				    	</ul>
   					</div>
 				</div>
 		        <script>
@@ -47,14 +57,26 @@
 	   		</nav>
 		</header>
 		<div id="main-content" class="main-content main-content-home">
-			<section class="home-flag">
-				<p>This is my main content.  Note that if you make the screen very small the navigation remains "stuck" to the top of the screen, but doesn't cover my content at page load.  What type of positioning do I need for this?</p>
-				<p>Now check out the footer.  No matter how large I make the screen the footer stays at the bottom, not floating mid-browser.</p>
+			<section class="contact">
+				<h1>Contact IAM FAM</h1>
+				<p>Email: iamfam-1718@umich.edu</p>
+				<p>Check out our spotify playlists below.</p>
+				<div class="spotify">
+					<iframe src="https://open.spotify.com/embed/user/1258886988/playlist/3EYMTWFgfGkaBZHRjglVGM" width="300" height="380" frameborder="0" allowtransparency="true" class="holy"></iframe>
+					<iframe src="https://open.spotify.com/embed/user/1258886988/playlist/5rZAoDzKicrEOWaKSAx4xA" width="300" height="380" frameborder="0" allowtransparency="true" class="pagan"></iframe>
 				</div>
 			</section>
 		</div>
 		<footer class="footer">
-			<p>This site was created by Lilian Sheu &copy; 2018</p>
+			<div class="foot">
+				<ul>
+					<li><a href="https://open.spotify.com/user/1258886988/playlist/3EYMTWFgfGkaBZHRjglVGM">Holy IAMs</a></li>
+					<li><a href="https://open.spotify.com/user/1258886988/playlist/5rZAoDzKicrEOWaKSAx4xA">Pagan IAMs</a></li>
+				</ul>
+			</div>
+			<div class="copyright">
+				<p>This site was created by Lilian Sheu &copy; 2018</p>
+			</div>
 		</footer>
 	</body>
 </html>

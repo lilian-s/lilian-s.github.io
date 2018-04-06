@@ -27,23 +27,25 @@ a.skip:active, a.skip:focus, a.skip:hover {
 }
 html, body, header, footer{
     background-color: #800000;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Helvetica', sans-serif;
     margin: 0;
     padding: 0;
 }
 header, footer, .logo {
 	background-color: #211D24;
 	color: #DDDDDA; 
+	z-index: 2;
 }
 body{
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 h1, h2, h3, h4, h5, h6{
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Helvetica', sans-serif;
 }
 p{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Helvetica', sans-serif;
 }
 h1{ 
 	font-size: 1.75em;
@@ -75,21 +77,24 @@ h6{
 
 /*-----HEADER & NAVIGATION-----*/
 header{
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Helvetica', sans-serif;
 	font-size: 105%;
-    box-shadow: 0px 18px 26px 1px rgba(141, 141, 139, .75);
+    /*box-shadow: 0px 18px 26px 1px rgba(141, 141, 139, .75);*/
     width: 100%;
     position: fixed;
     vertical-align: center;
+    border-bottom: 1px solid white;
 }
 
 /*mobile-first*/
-.top-nav ul{
+.top-nav ul {
 	list-style-type: none;
 	padding: 0;
 	background-color: #211D24;
 	margin: 0;
 	display: block;
+	width: 100%;
+	position: fixed;
 }
 .top-nav ul li, .menu-icon{
 	border-top: 1px solid #DDDDDA; /*CHANGE*/
@@ -102,7 +107,7 @@ header{
 	display: block;
 	text-align: center;
 }
-.menu-icon a{
+.menu-icon a {
 	font-size: 1em;
 	color: #DDDDDA; /*CHANGE*/
 	text-decoration: none;
@@ -111,12 +116,14 @@ header{
 	text-align: center;
 }
 .top-nav ul li a.current-page{
-	color: #F54320;
+	color: black;
 	font-weight: bold;
+	background-color: #FFFFCC; /*cream*/
 }
+
 .top-nav ul li a.current-page:before {
   content: "\27A4  ";
-  color: #F54320;
+  color: black;
   padding-right: 4px;
   position: relative;
   top: 1px;
@@ -133,6 +140,8 @@ header{
   	position: relative;
   	top: 1px;
 }
+
+
 /*implement menu toogle*/
 .top-nav.toggle-open ul{
 	display: block;
@@ -143,7 +152,7 @@ header{
 	background-color: #211D24;
 	margin: 0;
 	text-align: left;
-	padding: .25em .75em;
+	padding: .75em;
 	position: relative;
 	float: left;
 }
@@ -151,67 +160,42 @@ header{
 	height: 3em;
 }
 
-/* Dropdown Button */
-.dropbtn {
-    background-color: #211D24; /*off black*/
-    color: #FFFFCC; /*cream*/
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    vertical-align: center;
-    height: 4em;
-    width: 4em;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #5E0000; /*deep maroon*/
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    float: right;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    right: 0;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-
 
 /*-----FOOTER-----*/
 footer{
 	/*color: #F54320;*/
-	font-size: .85em;
-	text-align: center;
-	box-shadow: 0px -10px 30px 2px rgba(141, 141, 139, .75);
+	font-size: .75em;
+	text-align: right;
+	/*box-shadow: 0px -10px 20px 2px rgba(141, 141, 139, .5);*/
+	padding-right: 10px;
 }
-footer p{
-	padding-top: .5em;
+
+footer ul li a {
+	list-style-type: none;
+	text-decoration: none;
+	color: white;
+}
+
+footer ul {
+	list-style-type: none;
+	text-decoration: none;
+}
+
+footer ul li {
+	list-style-type: none;
+	text-decoration: none;
+	float: left;
+	display: inline-block;
+	padding: .5em;
+	margin: 5px;
+	border: 1px dotted #FFFFCC;
+}
+
+footer .copyright p {
+	padding-top: .75em;
 	padding-bottom: .75em;
+	color: white;
+	text-decoration: none;
 }
 
 .icon{
@@ -221,36 +205,117 @@ footer p{
 
 /*-----HOMEPAGE-----*/
 .main-content-home{
-	margin-top: 250px;
+	margin-top: 100px;
 }
-.home-flag{
+
+.home-page img {
+	color: black;
+	display: flex;
+	flex-direction: column;
+	max-width: 500px;
+	margin: auto;
+	vertical-align: center;
+}
+
+.home-page h1 {
+	font-family: "Brush Script MT", fantasy;
+	text-align: center;
+	color: #FFFFCC;
+	font-size: 2.5em;
+	border: none;
+}
+
+.main-content h2 {
+	font-family: "Comic Sans MS", cursive;
+	text-align: center;
+	color: #FFFFCC;
+	font-size: 1em;
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+/*-----ABOUT PAGE-----*/
+.about-flag h1 {
+	font-family: "Comic Sans MS", fantasy;
+	text-align: center;
+	color: #FFFFCC;
+	font-size: 2.5em;
+}
+
+.about-flag p {
 	background-color: #FFFFCC;
-	opacity: 50%;
-	color: ;
+	opacity: 0.8;
+	color: black;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	max-width: 300px;
 	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 50px;
 	padding: 1.5em;
-	box-shadow: 0px 8px 10px gray, -10px 8px 15px gray, 10px 8px 15px gray;
+	vertical-align: center;
 }
 
-/*-----IMAGES PAGE ------*/
+/*-----GALLERY PAGE ------*/
 .main-content-crafts{
 	margin-top: 250px;
 }
 /*photo gallery*/
 .crafts{
-	display: block;
+	display: inline-block;
 	margin: auto;
 	max-width: 1200px;
 }
+
+.crafts h1 {
+	font-family: "Comic Sans MS", fantasy;
+	text-align: center;
+	color: #FFFFCC;
+	font-size: 2.5em;
+}
+
 .photo-cell{
 	margin-bottom: 2%;
 	margin-left: 2%;
+	position: fixed;
 }
-.photo-cell img {
-	width: 98%;
+.photo-grid img {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
+	margin-bottom: 2%;
   	display: block;
   	box-shadow: 0px 0px 10px rgba(141, 141, 139, .75);
+}
+
+/*-----CONTACT PAGE-----*/
+.contact h1 {
+	font-family: "Comic Sans MS", fantasy;
+	text-align: center;
+	color: #FFFFCC;
+	font-size: 2.5em;
+}
+
+.contact p {
+	text-align: center;
+	background-color: #FFFFCC;
+	opacity: 0.7;
+	color: black;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	max-width: 300px;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	padding: 1.5em;
+	vertical-align: center;
+}
+
+.spotify {
+	display: inline-block;
+	position: relative;
+	float: center;
 }
