@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Final Exam</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>	
+
+	<body>
+		<h1>Lilian Sheu</h1>
+		<img src="images/examPic.jpg" alt="exam picture" id="img1">
+		<img src="images/UMSI-logo.jpg" alt="logo" id="img2">
+	</body>
+	<footer>
+		<button id="hide">Hide Image</button>
+		<script>
+			$(document).ready(function() {
+				$("#hide").click(function() {
+					$("#img1").hide();
+					$("#img2").css("width", "75%");
+					$("#img2").css("margin-right", "5%");
+					$("#hide").css('margin-top', "80%");
+				});
+				$("#show").click(function() {
+					$("#img1").show();
+					$("#img2").css("width", "37.5%");
+					$('#img2').css("margin-right", "auto");
+					$("#hide").css('margin-top', "0%");
+				});
+			});
+		</script>
+		<button id="show">Show Image</button>
+	</footer>
+</html>
